@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #FFFFFF; /* White background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login-container {
+  background: #FFFFFF;
+  padding: 40px;
+  border-radius: 10px;
+  width: 350px;
+  box-shadow: 0 0 10px rgba(0, 128, 0, 0.2); /* Green glow */
+  text-align: center;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #008000; /* Green heading */
+}
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #000000; /* Black labels */
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ADFF2F; /* Light green border */
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #FFD700; /* Yellow */
+  color: #000000; /* Black text */
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #ADFF2F; /* Light Green hover */
+}
+
+.actions {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.actions a {
+  display: block;
+  margin-top: 8px;
+  color: #008000; /* Green links */
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+.actions a:hover {
+  text-decoration: underline;
+}
+.messageDiv{
+    background-color:hsl(327,90%,28%);
+    color:white;
+    padding:10px 20px;
+    margin:10px;
+    border-radius: 5px;
+    font-size:1rem;
+    opacity:0;
+    animation:fadeOut 7s forwards;
+
+}

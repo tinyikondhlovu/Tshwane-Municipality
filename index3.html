@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>TSHWANE SERVICE DELIVERY SYSTEM</title>
+
+  <!-- materialize icons, css & js -->
+  <link rel="stylesheet" href="css/materialize.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" type="text/css" />
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <link rel="manifest" href="manifest.json">
+
+  <!-- iOS & Theme Color Support -->
+  <link rel="apple-touch-icon" href="icons/icon-96.png" />
+  <meta name="apple-mobile-web-app-status-bar" content="#00695c" />
+  <meta name="theme-color" content="#00695c" />
+</head>
+<body class="teal lighten-5">
+  <!-- top nav -->
+  <nav class="z-depth-0">
+    <div class="nav-wrapper container">
+      <span class="left grey-text text-darken-2">
+        <i class="material-icons sidenav-trigger" data-target="side-menu">menu</i>
+      </span>
+      <a class="center" href="/"><span>Tshwane Service Delivery</span></a>
+    </div>
+  </nav>
+
+  <!-- side nav -->
+  <ul id="side-menu" class="sidenav side-menu">
+    <li><a class="subheader">SERVICES</a></li>
+    <li><a href="tshwane home page/tshwane report/index2.html" class="waves-effect">Home</a></li>
+    <li><a href="pages/about.html" class="waves-effect">About</a></li>
+    <li><a href="" class="waves-effect">Support</a></li>
+    <li><a href="/" class="waves-effect">Languages</a></li>
+    <li><a href="/" class="waves-effect">High Risk Areas</a></li>
+    <li><a href="/" class="waves-effect">Events</a></li>
+    <li><a href="/" class="waves-effect">Comments</a></li>
+    <li><a href="tshwane-login/index1.html" class="waves-effect">Sign out</a></li>
+  </ul>
+
+  
+
+  <!-- contacts -->
+  <div class="contacts container grey-text text-darken-1">
+    <div class="grey-text text-darken-1 pk-contact">
+      <div class="contact-image">
+        <img src="img/pkcontacts.png" alt="contact thumb" />
+      </div>
+      <div class="contact-details">
+        <div class="contact-title">Cyril Ramaphosa</div>
+        <div class="contact-numbers">+27123456789</div>
+      </div>
+      <div class="contact-options">
+        <i class="material-icons">call</i>
+        <i class="material-icons">delete_outline</i>
+      </div>
+    </div>
+  </div> 
+  <div class="contacts container grey-text text-darken-1">
+    <div class="grey-text text-darken-1 pk-contact">
+      <div class="contact-image">
+        <img src="img/pkcontacts.png" alt="contact thumb" />
+      </div>
+      <div class="contact-details">
+        <div class="contact-title">Tinyiko Ndhlovu</div>
+        <div class="contact-numbers">+27123456789</div>
+      </div>
+      <div class="contact-options">
+        <i class="material-icons">call</i>
+        <i class="material-icons">delete_outline</i>
+      </div>
+    </div>
+  </div> 
+
+  <div class="contacts container grey-text text-darken-1">
+    <div class="grey-text text-darken-1 pk-contact">
+      <div class="contact-image">
+        <img src="img/pkcontacts.png" alt="contact thumb" />
+      </div>
+      <div class="contact-details">
+        <div class="contact-title">Bheke Cele</div>
+        <div class="contact-numbers">+27123456789</div>
+      </div>
+      <div class="contact-options">
+        <i class="material-icons">call</i>
+        <i class="material-icons">delete_outline</i>
+      </div>
+    </div>
+  </div> 
+
+  <div class="center">
+    <a class="btn-floating btn-small btn-large add-btn sidenav-trigger" data-target="side-form">
+      <i class="material-icons">add</i>
+    </a>
+  </div> 
+
+  <!-- add services side nav -->
+  <div id="side-form" class="sidenav side-form">
+    <form class="add-contact container section">
+      <h6>Add Services</h6>
+      <div class="divider"></div>a
+      <div class="input-field">
+        <input placeholder="e.g. Cyril Ramaphosa" id="title" type="text" class="validate" />
+        <label for="title">Contact Name</label>
+      </div>
+      <div class="input-field">
+        <input placeholder="e.g. +27123456789" id="numbers" type="text" class="validate" />
+        <label for="numbers">Number</label>
+      </div>
+      <div class="input-field">
+        <input placeholder="e.g. ramaphosa@gmail.com" id="e-mail" type="text" class="validate" />
+        <label for="e-mail">E-mail</label>
+      </div>
+
+      <!-- Checkbox Section -->
+      <p>
+        <label>
+          <input type="checkbox" id="potholes" />
+          <span>Potholes</span>
+        </label>
+      </p>
+      <p>
+        <label>
+          <input type="checkbox" id="illegal-dumping" />
+          <span>Illegal Dumping</span>
+        </label>
+      </p>
+
+      <!-- Location input with GPS -->
+      <div class="input-field">
+        <input placeholder="e.g. 123 Main Street, Pretoria" id="location" type="text" class="validate" />
+        <label for="location">Location</label>
+        <button class="btn-small" type="button" onclick="getLocation()" style="margin-top:10px;">Use My Location</button>
+      </div>
+
+      <!-- Image upload input -->
+      <div class="file-field input-field">
+        <div class="btn-small">
+          <span>Upload Image</span>
+          <input type="file" id="image-upload" />
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text" placeholder="Upload image of the issue" />
+        </div>
+      </div>
+
+      <!-- More info -->
+      <div class="input-field">
+        <textarea id="more-info" class="materialize-textarea" placeholder="Provide more details..."></textarea>
+        <label for="more-info">More Info</label>
+      </div>
+
+      <div class="input-field center">
+        <button class="btn-small">Add Services</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- App JS -->
+   
+  <script type="text/javascript" src="js/common.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+
+  <!-- Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/sw.js')
+          .then(function (reg) {
+            console.log('Service Worker registered with scope:', reg.scope);
+          })
+          .catch(function (err) {
+            console.error('Service Worker registration failed:', err);
+          });
+      });
+    }
+
+    // Geolocation helper
+    function getLocation() {
+      const locationInput = document.getElementById("location");
+
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          function (position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            locationInput.value = `Lat: ${latitude}, Lon: ${longitude}`;
+          },
+          function (error) {
+            alert("Unable to retrieve location. Please allow location access.");
+          }
+        );
+      } else {
+        alert("Geolocation is not supported by this browser.");
+      }
+    }
+
+    // Redirect to last.html on Add Services submit
+    document.addEventListener('DOMContentLoaded', function() {
+      const addContactForm = document.querySelector('.add-contact');
+      if (addContactForm) {
+        addContactForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          window.location.href = "pages/last.html";
+        });
+      }
+    });
+  </script>
+
+
+ <script type="text/javascript" src="js/db.js"></script>
+</body>
+</html>
+
+
